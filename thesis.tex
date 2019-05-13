@@ -1,0 +1,105 @@
+% Preambel mit Einstellungen importieren
+\input{preambel}
+
+% Dokumenteninfos importieren
+\input{docinfo.tex}
+
+% Literatur-Datenbank
+\addbibresource{literatur.bib}   % BibLaTeX-Datei mit Literaturquellen einbinden
+% \bibliographystyle{IEEEtran} 
+%\bibliographystyle{plain}
+%\bibliography{../literatur.bib} 
+
+\begin{document}
+\frontmatter
+
+% Römische Ziffern für die "Front-Matter"
+\setcounter{page}{0}
+\changefont{ptm}{m}{n}  % Times New Roman für den Fließtext
+\renewcommand{\rmdefault}{ptm}
+
+% Titelblatt und \Abstract
+\input{titelblatt}
+
+% Inhaltsverzeichnis erzeugen
+\cleardoublepage
+\pdfbookmark{\contentsname}{Contents}
+\tableofcontents
+
+% Korrigiert Nummerierung bei mehrseitigem Inhaltsverzeichnis
+\cleardoublepage
+\newcounter{frontmatterpage}
+\setcounter{frontmatterpage}{\value{page}}
+
+% Abkürzungsverzeichnis
+\addchap{\hsmaabbreviations}
+\input{abkuerzungen}
+
+% Arabische Zahlen für den Hauptteil
+\mainmatter
+
+% Den Hauptteil mit vergrößertem Zeilenabstand setzen
+\onehalfspacing
+
+% ------------------------------------------------------------------
+% Hauptteil der Arbeit
+\input{kapitel1} % Externe Datei einbinden
+\input{kapitel2} % Externe Datei einbinden
+\input{kapitel3} % Externe Datei einbinden
+\input{kapitel4} % Externe Datei einbinden
+\input{kapitel5} % Externe Datei einbinden
+\input{kapitel6} % Externe Datei einbinden
+% ------------------------------------------------------------------
+
+\label{lastpage}
+
+% Neue Seite
+\cleardoublepage
+
+% Backmatter mit normalem Zeilenabstand setzen
+\singlespacing
+
+% Römische Ziffern für die "Back-Matter", fortlaufend mit "Front-Matter"
+\pagenumbering{roman}
+\setcounter{page}{\value{frontmatterpage}}
+
+% Literaturverzeichnis erzeugen
+\begin{flushleft}
+\printbibliography
+\end{flushleft}
+
+% Tabellenverzeichnis erzeugen
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\hsmalistoftables}
+\listoftables
+
+% Abbildungsverzeichnis erzeugen
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\hsmalistoffigures}
+\listoffigures
+
+% Listingverzeichnis erzeugen
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\hsmalistings}
+\lstlistoflistings
+
+% Index ausgeben. Wenn Sie keinen Index haben, entfernen Sie einfach
+% diesen Teil.
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{\hsmaindex}
+%\printindex
+
+% Anhang. Wenn Sie keinen Anhang haben, entfernen Sie einfach
+% diesen Teil.
+\appendix
+\input{anhang-a} % Tabellen, Datenblätter
+\input{anhang-b} % Globalstrahlung umrechnen
+\input{anhang-c} % SGAM 
+\input{anhang-d} % Code und Konfigurationsdateien 
+
+
+\end{document}

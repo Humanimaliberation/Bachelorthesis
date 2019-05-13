@@ -1,0 +1,58 @@
+\chapter{Ergebniszusammenfassung und Handlungsempfehlungen zur Auslegung der Anlage}
+\label{Kap5}
+In diesem Kapitel werden die Simulationsergebnisse zusammengefasst, verglichen und bewertet, um daraus Handlungsempfehlungen zur Dimensionierung und Betriebsweise der Energieverbundinsel abzuleiten.
+
+\section{Zusammenfassung der Ergebnisse}
+\label{Kap:Simulation_result}
+	\textbf{Ertrag und Verbrauch}\\
+	Die Wertebereiche für mögliche Ertrags- und Verbrauchsleistungen umfassen eine große Spannbreite. Das Ertragsprofil fluktuiert stark in Abhängigkeit des Wetters und der Tages- und Jahreszeit. Die Lastprofile der Szenarien unterscheiden sich stark in Abhängigkeit des Ladebedarfs, der Nutzungszeit und dem gewählten Lademodus. Dabei ist die Nutzungszeit in der Regel tagsüber für Angestellte, Studierende und Besuchende der Hochschule oder näheliegender Einrichtungen und nachts für Anwohnende. Der Tagesertrag der PV-Anlage mit 20,145 kWP schwankt von kleiner als 1~kWh im WC bis über 157~kWh bei einem Durchschnitt von 55~kWh. Der Gesamtverbrauch der aller drei Szenarien beträgt 122,38~kWh im WC, 52,54~kWh im NC und 39,04~kWh im BC. Das Verhältnis aus insgesamt erzeugter und durch Ladepunkte verbrauchter Energie beträgt in den Szenarien 0,78~$\%$ im WC, 104,67~$\%$ im NC und 402,66~$\%$ im BC.\\
+
+	\textbf{Eigenverbrauchsanteil, Autarkiegrad und Einfluss der Pufferbatterie}\\
+	Die Eigenverbrauchsanteile und Autarkiegrade lassen sich aus den Ertrags- und Verbrauchsprofilen sowie der Dimensionierung der Pufferbatterie errechnen. Der Eigenverbrauchsanteil der PV-Erzeugung mit (und ohne) Pufferbatterie beträgt jeweils 100~$\%$ (42,11~$\%$) im WC, ca. 71,85~$\%$ (62,69~$\%$) im NC und ca. 25,69~$\%$ (23,91~$\%$) im BC und der Autarkiegrad mit (und ohne) Pufferbatterie
+0,78~$\%$ (0,33~$\%$) im WC, 73,32~$\%$ (65,61~$\%$) im NC und 100~$\%$ (96,29~$\%$) im BC. Die Pufferbatterie findet im WC am wenigsten und im NC am meisten Gebrauch. Den Eigenverbrauchsanteil beeinflusst die Pufferbatterie relativ gesehen am stärksten im WC trotz geringstem Verbrauch, da das Verhältnis von PV-Erzeugung zu Verbrauch deutlich kleiner ist als im NC und BC. Der Autarkiegrad wird durch die Pufferbatterie am stärksten im NC erhöht. Die Brutto Ladeenergie (und Netto Entladeenergie) der Pufferbatterie beträgt jeweils 0,55~kWh (1,99~kWh) im WC, 5,21~kWh (5,76~kWh) im NC und 2,79~kWh (1,45~kWh) im BC.\\
+
+\section{Bewertung der Ergebnisse}
+	\label{Kap:Simulation_conclusion}
+	Die Simulationsergebnisse sind nur bedingt aussagekräftig, aufgrund der hohen Unsicherheit der Repräsentativität des modellierten Nutzungsverhaltens der Ladeinfrastruktur. Die zeitliche Auflösung von einer Stunde mittelt zudem Schwankungen des Ertragsprofils heraus. \\
+    
+	Die Pufferbatterie bietet an an Tagen extrem hoher oder niedriger PV-Erträge nur einen geringen Vorteil. Lediglich an normalen Tagen kommt sie mit mehr als einem Ladezyklus am Tag bemerkbar zum Gebrauch und verbessert den Autarkiegrad deutlich. Die potentielle Regelleistung durch intelligent gesteuerte Ladesequenzen ist verglichen mit der Pufferbatterie wesentlich größer und verlustärmer um ungünstige Lastspitzen zu vermeiden. \\    
+    
+\section{Handlungsempfehlung zur Auslegung und Betriebsweise der Anlage}
+\label{Kap:Advice}
+\subsection{Komponentenauswahl der Energieverbundinsel}
+	Für die Ausarbeitung der Komponentenebene in SGAM zur Optimierung der Ladefinfrastruktur auf Energie- und Kosteneffizienz empfehlen sich folgende Punkte:
+    \begin{itemize}
+    	\item \underline{Prozesszone:}\\
+        	Nutzung keiner Pufferbatterie aufgrund Nichtrentabilität und geringen Regelleistungspotential und für die Ladeinfrastruktur eine Neuauslegung der maximalen Übertragungsleistung am Anschlusspunkt der Ladeinfrastruktur auf ca. 22 bis 30~kW und an den drei Auto-Ladepunkte (mit Typ 2 Stecker) auf 1x22~kW AC und 2x11~kW AC  
+        \item \underline{Feldzone:} \\
+        	Konzipierung der Ladepunkte mit steuerbarem Laderegler und sicherer Kommunikationsmöglichkeit entweder mit zentralem EMS oder dezentral untereinander und mit Erzeugungsanlagen
+	\end{itemize} 
+%            - Verwendung keiner Pufferbatterie wegen Nichtrentabilität und geringem Potential für Regelleistung \\
+%            - Neuauslegung der Begrenzung der Übertragungsleistung am Anschlusspunkt der Ladeinfrastruktur auf ca. 22 bis 30~kW \\
+%            - Neuauslegung der drei Auto-Ladepunkte auf 1x22~kW AC und 2x11~kW AC mit Typ 2 Steckern       
+
+\subsection{Energiemanagementkonzept}
+	Für die Verbesserung des Energiemanagementkonzepts im SGAM empfehlen sich folgende Punkte:    
+    \begin{itemize}
+        \item \underline{Funktionsebene: Operationszone} \\ 
+        	Entwicklung einer dynamischen Ladesteuerung mit Berücksichtigung sowohl der momentanen als auch prognostizierten erzeugten bzw. verbrauchten Leistung im Verbundnetz
+		\item \underline{Kommunikations- und Informationsebene: Feld-, Stations- und Operationszone} \\ 
+			Grundlegende Untersuchung von Möglichkeiten dezentralen Energiemangements ohne klassische Server-Client-Hierarchie durch eigenintelligent miteinander kommunizierende Geräte unter Anwendung von Distributed-Ledger-Technologien verteilter Rechennetzwerke wie z.B. Technologien auf Basis von Blockchains wie Etherum, auf Basis von Blockchainabwandlungen wie der Tangle von IOTA oder auf Basis von Hashgraphen
+        \item \underline{Informations- und Funktionsebene: Prozess- Feld-, Stations- und Operationszone} \\ 
+        	Erstellung einer Testumgebung mit Datenmodellen und Energiemanagementalgorithmus möglichst in einer Sprache, womit sich die Steueralgorithmen der Testumgebung möglichst einfach implementieren lassen z.B. durch Verwendung des Datenprotokolls SPINE von EEBUS
+    \end{itemize}
+    
+    
+\section{Ausblick}
+\label{Kap:Perspektive}
+	Auf weite Sicht lässt sich die geplante Energieverbundinsel auf mehr als die PV-Anlage und die Ladeinfrastruktur erweitern. 
+	\begin{itemize}
+        \item \underline{Komponentenebene: Prozesszone:} \\
+        	- Berücksichtigung des Gesamtverbrauchs im Hochschulnetz \\
+        	- Integration von mehr vorhandenen energietechnisch relevanten Geräten in die Energieverbundinsel, z.B. Lüftungssysteme und Boiler der Hochschule\\
+        	- Untersuchung der Ausbaumöglichkeiten von weiteren Erzeugungsanlagen wie weiteren PV-Anlagen und Mini-Windkraftanlagen \\
+        	- Nähere Untersuchung zum Ausbaupotential weiterer Speichermöglichkeiten z.B. durch Verwendung von Wasserstoffelektrolyse und einer Brennstoffzelle
+        \item \underline{Ebenenübergreifend:} \\ 
+        	Ausbau der Energieverbundinsel zum zentral gesteuerten virtuellen Kraftwerk zur Bereitstellung von Regelleistung für das elektrische Versorgungsnetz oder Ausbau der Infrastruktur für intelligente Anbindung von Einzelgeräten zur Bereitstellung von Regelleistung durch Einzelgeräte als virtuelles Mini-Kraftwerk 
+	\end{itemize}
+    

@@ -1,0 +1,27 @@
+Bild1	Quelle
+Bild2	Quelle
+usw.
+
+
+CCS	http://www.mennekes.de/uploads/media/MENNEKES_Medieninformation_-_Ladesteckvorrichtungen_Typ_2_f%C3%BCr_AC_und_DC_Ladung_02.pdf
+
+Typ2	http://www.mennekes.de/uploads/media/MENNEKES_Medieninformation_-_Ladesteckvorrichtungen_Typ_2_f%C3%BCr_AC_und_DC_Ladung_02.pdf
+
+
+AC_DC_Steckervorrichtung_Typ2	http://www.mennekes.de/uploads/media/MENNEKES_Medieninformation_-_Ladesteckvorrichtungen_Typ_2_f%C3%BCr_AC_und_DC_Ladung_02.pdf
+
+
+Für Steckertypentabelle:
+%				https://de.wikipedia.org/wiki/Schuko#/media/File:Steckdose.jpg
+
+%				https://en.wikipedia.org/wiki/IEC_60309#/media/File:CEE-Stecker.jpg
+
+%				https://en.wikipedia.org/wiki/File:Type1_J1772.svg
+
+%				https://de.wikipedia.org/wiki/Datei:Stecker-Typ_2_Belegung.svg
+
+%				https://insideevs.com/wp-content/uploads/2012/10/SAE-Combo-plugs.jpg
+
+%				https://de.wikipedia.org/wiki/Datei:CCSCombo2.svg
+
+%				https://en.wikipedia.org/wiki/CHAdeMO#/media/File:Chademo-combo2-iec-type-2-connectors-side-by-side.jpg
